@@ -12,3 +12,36 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.modal-body > span {
+  display: inline;
+  padding: 10px 20px 10px 2px;
+}
+
+.modal-body > p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.InfoTable {
+  margin: 20px 0;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th:nth-child(2) {
+  border-bottom: 2px solid rgb(178, 222, 39);
+}
+
+thead th:nth-child(3) {
+  border-bottom: 2px solid rgb(255, 99, 132);
+}
+
+thead th:nth-child(4) {
+  border-bottom: 2px solid rgb(53, 162, 235);
+}
+
+thead th:nth-child(5) {
+  border-bottom: 2px solid rgb(0, 0, 0);
+}

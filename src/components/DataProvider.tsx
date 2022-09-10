@@ -1,13 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
+import { IDevice } from '../types/interfaces'
 
 import DataPlot from './DataPlot'
-
-interface IDevice {
-  deviceid: string,
-  fromts: number,
-  tots: number,
-  metrics?: Object,
-}
 
 export default function DataProvider() {
   const [data, setData] = useState([])
@@ -17,7 +11,9 @@ export default function DataProvider() {
     // Fetch data from API
     fetch('/api')
       .then(res => res.json())
-      .then(res => setData(res[0]))
+      .then(res => {
+        setData(res[0])
+      })
       .catch(err => console.error(`Error fetching data: ${err}`))
   }, [])
 
@@ -28,7 +24,7 @@ export default function DataProvider() {
   function normalizeData(array: any[]): IDevice[] {
     return array.map((item: IDevice) => {
       if (item.metrics) {
-        item.metrics = JSON.parse(item.metrics as string)
+        item.metrics = JSON.parse(item.metrics as unknown as string)
       }
       return item
     })
