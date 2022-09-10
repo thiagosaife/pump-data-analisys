@@ -11,6 +11,5 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 ### `yarn serve`
 
-Open another terminal and run the command > cd server\ 
-then run > `yarn serve` to start the server
+Open another terminal > `cd server`, then run > `yarn serve` to start the server
 The server will run on [http://localhost:8080](http://localhost:8080)
