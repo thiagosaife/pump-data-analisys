@@ -57,7 +57,7 @@ export default function InfoPanel(dataPlot: TProps) {
               <strong>Idle:</strong> n {'<'} 20%
             </li>
             <li>
-              <strong>Loaded:</strong> 20% {'>='} n {'<='} 100%
+              <strong>Loaded:</strong> 20% {'<='} n {'<='} 100%
             </li>
             <li>
               <strong>Unloaded:</strong> n ≈ 0.1A
